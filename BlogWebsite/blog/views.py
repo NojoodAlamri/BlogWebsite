@@ -30,7 +30,7 @@ def blogs(request):
 
 
 def comments(request):
-    comment= Comment.objects.all().values()
+    comment= Comment.objects.all()
     template = loader.get_template('comments.html')
     context = {
         'comment': comment
