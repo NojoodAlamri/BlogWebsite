@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+    comments
+{% endblock %}
+
+{% block content %}
+
+<h1>All comments</h1>
+    {% for x in comment %}
+        <ul>
+            <li>
+                <p>Post ID: {{x.post_id}}</p>
+                <p>Comment: {{x.content}}</p>
+            </li>
+        </ul>
+    {% endfor %}
+
+{% endblock %}
